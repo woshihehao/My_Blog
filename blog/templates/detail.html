@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body{
+            background: url(/static/images/3.jpg);
+            color:#fff;
+        }
+        .blog_title{
+            font-size:2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .li_small_1 a{
+            color:#ccc;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .blog_info1{
+            text-align: right;
+            padding-right: 50px;
+            padding-bottom:10px;
+            line-height:20px;
+        }
+        .blog_description{
+            line-height:30px;
+            padding:10px 50px;
+        }
+
+        .blog_description pre{
+            width:600px;
+            border-radius:5px;
+            padding: 20px 30px;
+            background: #4B4949;
+        }
+    </style>
+</head>
+<body>
+
+
+{% load django_markdown %}
+  <div class="main_body">
+    <div class="blog_body">
+      <div class="blog_title">{{ blog.caption }}</div>
+      <div class="blog_info1">
+        <span class="blog_info1_list">
+          <span class="li_small_1">分类：<a href="#">{{ blog.classification }}</a></span>
+          <span class="li_small_1">作者：<a href="#">{{ blog.author }}</a></span><br>
+          <span class="li_small_1">发表时间：{{ blog.publish_time|date:"Y-m-d H:i" }}</span>
+        </span>
+      </div>
+      <div class="blog_splitline"></div>
+      <div class="blog_description">{{ blog.content|markdown }}</div>
+    </div>
+    </div>
+
+</body>
+</html>
