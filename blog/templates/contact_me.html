@@ -1,0 +1,86 @@
+<html>
+<head>
+<link href="../static/css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Darx Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+<script src="../static/js/jquery.min.js"></script>
+</head>
+<body style="background:url(/static/images/3.jpg);color:#fff;">
+
+<div class="header">
+		<div class="container">
+			<div class="logo">
+				<img src="/static/images/hao1.png" class="img-responsive" alt="" style="height:90px;width:90px;"/>
+			</div>
+			<div class="header-right">
+				<div class="header-top">
+					<ul>
+						<li>Call me: +86 1343 8866 076</li>
+						<li><a href="#"><i class="fb"> </i></a></li>
+						<li><a href="#"><i class="twt"> </i></a></li>
+						<li><a href="#"><i class="rs"> </i></a></li>
+						<li><a href="#"><i class="bg"> </i></a></li>
+						<li><a href="#"><i class="msg"> </i></a></li>
+						<li><a href="#"><i class="md"> </i></a></li>
+							<div class="clearfix"></div>
+					</ul>
+				</div>
+				<div class="head-nav">
+					<span class="menu"> </span>
+						<ul class="cl-effect-15">
+							<li ><a href="/">HOME</a></li>
+
+							<li><a href="/about" >ABOUT ME</a></li>
+
+							<li class="active"><a href="/contact_me" data-hover="CONTACT">CONTACT ME</a></li>
+								<div class="clearfix"> </div>
+						</ul>
+				</div>
+
+			</div>
+				<div class="clearfix"> </div>
+					<script>
+						$( "span.menu" ).click(function() {
+						  $( ".head-nav ul" ).slideToggle(300, function() {
+							// Animation complete.
+						  });
+						});
+						<!-- script-for-nav -->
+					</script>
+				<!-- script-for-nav -->
+		</div>
+	</div>
+
+
+    <div class="contact-bottom" style="margin-left:10%;">
+			<h3>Contact Form</h3>
+                <form method="post" action="MAILTO:hao@fuestck.ml">
+                    {% csrf_token %}
+					<div class="contact-text">
+
+						    <div class="col-md-6 contact-left-text">
+
+							    <input type="text" value="First Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'First Name';}">
+							    <input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}">
+							    <input type="text" value="Phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Phone';}">
+						    </div>
+						    <div class="col-md-6 contact-right-text">
+							    <textarea value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Message';}">Message..</textarea>
+						    </div>
+						    <div class="clearfix"></div>
+						    <div class="contact-but">
+							    <input type="submit" >
+						    </div>
+
+                    </div>
+                    </form>
+
+    </div>
+</body>
+</html>
