@@ -12,11 +12,16 @@ def index(request):
    # blogs = Article.objects.all().order_by('-publish_time')
 
     #return render_to_response('index.html', {"blogs": blogs}, context_instance=RequestContext(request))
+def contact_me(reqest):
+    return render_to_response('contact_me.html', RequestContext(reqest))
+
+
 
 def beauty(request):
     str = "美女"
     cls = Classification.objects.get(name=str)
     blogs = Article.objects.filter(classification=cls)
+
     return render_to_response('beauty.html',{"blogs":blogs},context_instance=RequestContext(request))
 
 

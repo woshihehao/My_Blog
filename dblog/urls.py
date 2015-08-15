@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     url(r'^markdown/', include( 'django_markdown.urls')),
-
+    url(r'^pages/', include('django.contrib.flatpages.urls')),
     url(r'^$', 'blog.views.index', name='index'),
     url(r'^blog/beauty$','blog.views.beauty'),
     url(r'^blog/Ios$','blog.views.Ios'),
@@ -28,6 +28,7 @@ urlpatterns = patterns('',
     url(r'^blog/Django$','blog.views.Django'),
     url(r'^comments/', include('django.contrib.comments.urls')),
     url(r'^blog/detail/$', 'blog.views.blog_detail'),
+    url(r'^contact_me/$','blog.views.contact_me'),
 
 )
 
